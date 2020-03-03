@@ -55,10 +55,12 @@ namespace Algorithms
                 {
                     result[0] = arr[i];
                     result[1] = comp;
+                    return result;
                 }
                 else
                 {
-                    dict.Add(comp, arr[i]);
+                    if(!dict.ContainsKey(comp))
+                        dict.Add(comp, arr[i]);
                 }
             }
             return result;
